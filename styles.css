@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 48.5vw);
+  grid-template-rows: 15vh 60vh 12.5vh 12.5vh;
+  min-height: 100vh;
+  align-items: start;
+  background-color: black;
+  color: white;
+  padding: 2vh;
+}
+
+section > h1 {
+  font-size: 68px;
+}
+
+main {
+  height: 100vh;
+  padding: 10px;
+  background-color: gray;
+}
+
+#name {
+  grid-row: 3;
+  grid-column: 2;
+  text-align: end;
+}
+
+#name > h1 {
+  font-size: 68px;
+}
+
+#name > a {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+}
+
+#desc {
+  grid-row: 2;
+  grid-column: 1;
+  font-size: 48px;
+}
+
+#arrow_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 4;
+  grid-column: 1/3;
+}
+
+#arrow_container > a > i {
+  color: white;
+}
+
+.grid {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(5, 15vh);
+  grid-gap: 10px;
+}
+
+#grid_title {
+  grid-column: 1/5;
+  font-size: 68px;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.tile:hover {
+  border: 5px solid black;
+  background-color: white;
+}
+
+.tile:hover > a {
+  color: black;
+}
+
+.p-1 {
+  grid-column: 1/3;
+}
+
+.p-2 {
+  grid-column: 3/6;
+}
+
+.p-3 {
+  grid-column: 1/4;
+}
+
+.p-4 {
+  grid-column: 4/6;
+}
+
+.p-5 {
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+
+.p-6 {
+  grid-column: 3/6;
+}
+.p-7 {
+  grid-column: 3/6;
+}
+
+.p-8 {
+  grid-column: 1/6;
+}
+
+.tile > a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+section > p > a {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 425px) {
+  #grid_title {
+    font-size: 54px;
+  }
+  section > h1 {
+    font-size: 54px;
+  }
+  section {
+    width: available;
+  }
+  main {
+    width: available;
+  }
+
+  #desc {
+    font-size: 24px;
+  }
+
+  #name {
+    text-align: center;
+  }
+
+  #name > h1 {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(5, auto);
+  }
+  .tile > a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  #desc {
+    font-size: 28px;
+  }
+}
